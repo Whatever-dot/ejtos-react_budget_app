@@ -80,13 +80,13 @@ export const AppReducer = (state, action) => {
 const initialState = {
     budget: 2000,
     expenses: [
-        { id: "Marketing", name: 'Marketing', cost: 1 },
-        { id: "Finance", name: 'Finance', cost: 1 },
-        { id: "Sales", name: 'Sales', cost: 1 },
-        { id: "Human Resource", name: 'Human Resource', cost: 1 },
-        { id: "IT", name: 'IT', cost: 1 },
+        { id: "Marketing", name: 'Marketing', cost: 50 },
+        { id: "Finance", name: 'Finance', cost: 300 },
+        { id: "Sales", name: 'Sales', cost: 70 },
+        { id: "Human Resource", name: 'Human Resource', cost: 40 },
+        { id: "IT", name: 'IT', cost: 500 },
     ],
-    currency: '$'
+    Currency: '$'
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state
@@ -113,7 +113,7 @@ export const AppProvider = (props) => {
                 budget: state.budget,
                 remaining: remaining,
                 dispatch,
-                currency: state.Currency
+                Currency: state.Currency
             }}
         >
             {props.children}

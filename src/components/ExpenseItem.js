@@ -48,9 +48,6 @@ const ExpenseItem = (props) => {
             <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
-};
-
-/*<button onClick={event=> increaseAllocation(props.name)} style = {{color: 'white'}}>+</button>
-<td><button onClick={event=> decreaseAllocation(props.name)} style = {{color: 'white'}}>-</button></td>*/
+};           
 
 export default ExpenseItem;
