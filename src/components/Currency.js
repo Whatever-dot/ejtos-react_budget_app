@@ -3,6 +3,7 @@ import { AppContext } from '../context/AppContext';
 
 const Currency = () => {
   const {dispatch } = useContext(AppContext);
+
     const changeCurrency = (val)=>{
             dispatch({
                 type: 'CHG_Currency',
@@ -12,7 +13,7 @@ const Currency = () => {
     
   return (
         <div className='alert alert-secondary'> Currency {
-      <select name="Currency" id="Currency" onChange={event=>changeCurrency(event.target.value)} style="color: green">
+      <select name="Currency" id="Currency" onChange={event=>changeCurrency(event.target.value)} style ={{color: 'green'}}>
         <option value="$">Dollar($)</option>
         <option value="£">Pound(£)</option>
         <option value="€">Euro(€)</option>
@@ -22,4 +23,5 @@ const Currency = () => {
     </div>
     );
 };
+
 export default Currency;
